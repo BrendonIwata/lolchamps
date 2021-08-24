@@ -23,7 +23,7 @@ import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("/campeoes")
 public class CampeaoController {
 
     @Autowired
