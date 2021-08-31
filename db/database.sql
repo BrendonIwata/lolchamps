@@ -1,6 +1,6 @@
 create database LolChamps;
 
-CREATE TABLE campeao (
+CREATE TABLE Campeao (
 	id INT(11) PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(255) NOT NULL,
     anoLancamento DATE NOT NULL,
