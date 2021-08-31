@@ -1,0 +1,22 @@
+version: "3"
+
+services: 
+  lolchamps-api:
+    image: lolchamps-api
+    ports:
+     - 8080:8080
+    depends_on: 
+      db:
+        condition: service_healthy
+  db:
+    image: lolchamps-db
+    container_name: db
+    ports:
+     - 3306:3306
+    environment:
+     - MYSQL_ROOT_PASSWORD=root
+     - MYSQL_DATABASE=lolchamps
+     - MYSQL_PASSWORD=root
+     - MYSQL_USER=root
+    volumes:
+      - ./db/db-volume:/var/lib/mysql
